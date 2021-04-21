@@ -1,0 +1,58 @@
+<div *ngIf="userDetails">
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="row row1">
+      <ul class="largenav pull-right">
+          <li class="upper-links"><a class="navbar-brand text-white">JWT Auth System</a></li>
+         
+          <li class="upper-links dropdown"><a class="links">Hai !!<span>{{userDetails.firstName}} {{userDetails.lastName}}</span></a>
+              <ul class="dropdown-menu">
+                <li class="profile-li"><a >{{userDetails.username}}</a></li>
+                  <li class="button"><a class="btn btn-sm btn-warning" (click)="onLogout()">Logout</a></li>
+                 
+              </ul>
+          </li>
+      </ul>
+  </div>
+    <!-- <a class="navbar-brand text-white">JWT Auth System</a>
+    <ul class="">
+   
+      <li class="list-group-item"><strong>Username : </strong>{{userDetails.username}}</li>
+      <li class="list-group-item"><strong>FirstName : </strong>{{userDetails.firstName}}</li>
+      <li class="list-group-item"><strong>LastName : </strong>{{userDetails.lastName}}</li>
+    </ul> -->
+    <!-- <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button> -->
+  </nav>
+</div>
+<header>
+    <ul class="navbar-nav flex-grow">
+      <li class="nav-item">
+        <a class="nav-link text-dark" [routerLink]="['/carts']" style="text-align:right;"><img src="https://i.imgur.com/dCdflKN.png"  class="img-fluid"><span style="font-weight: 900;color:rgb(60, 60, 158);">{{count}}</span></a>
+      </li>
+    </ul>
+  </header>
+    <div class="container">
+      <div class="row">
+         <div class="col-lg-3" *ngFor="let forecast of _product" style="margin-bottom: 20px;">
+             <div class="card">
+               <div class="card bg-light" >
+                <div class="card-body">
+                  <div class="card-content align-items-center">
+                   <img [src]="forecast.produtImg" height="200" width="200" alt="product image" />
+                   <h5><a >{{ forecast.productName }}</a></h5>
+                   <div > ₹ {{ forecast.price}}</div>
+                   <div >
+                     <button (click)="AddProduct(forecast.productId,1,forecast.productName,forecast.price)" class="btn btn-rounded btn-xs btn-primary"><i class="fa fa-heart"></i>
+                       <span>Add to cart</span> 
+                    </button>
+                   </div>
+                  </div>
+                </div>
+               </div>        
+             </div>         
+         </div>
+      </div>
+    </div>
+  
+   
+  
+  

@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-md-flex align-items-center mb-4">
+                    <div>
+                        <h6 class="card-title text-uppercase font-16" style="color: rgb(24, 32, 105);">Product Yearly Sales</h6>
+                      
+                    </div>
+                    <div class="ml-auto d-flex no-block align-items-center">
+                   
+                    </div>
+                </div>
+                <div class="row">
+               
+                </div>
+                <div class="d-md-flex align-items-center mb-4">
+                   
+                    <div class="ml-auto d-flex no-block align-items-center">
+                        <ul class="list-inline dl m-r-15 m-b-0">
+                            
+                            <li class="list-inline-item font-weight-normal ml-2" style="color: rgb(172, 116, 43);"><i class="fa fa-circle text-muted"></i>Total Quantity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- column -->
+                    
+                    <div class="col-lg-12">
+                        
+                        <div style="display: block;">
+                            <canvas baseChart height="130" [datasets]="lineChartData1" [labels]="lineChartLabels1"
+                                [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                                [chartType]="lineChartType">
+                            </canvas>
+                        </div>
+                    </div>
+                    <!-- column -->
+                </div>
+            </div>
+        </div>

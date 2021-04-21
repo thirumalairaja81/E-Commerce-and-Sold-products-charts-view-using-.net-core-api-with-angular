@@ -1,0 +1,27 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-md-flex align-items-center mb-4">
+                    <div>
+                        <h6 class="card-title text-uppercase font-16" style="color:darkblue;align-content:center;"><span style="color:brown;" >No.of Quantity of Products Sold</span></h6>
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-lg-12">
+                     <div style="display: block">
+                       <canvas baseChart height="130"
+                       [data]="pieChartData1"
+                       [labels]="pieChartLabels1"
+                       [chartType]="pieChartType"
+                       (chartHover)="chartHovered($event)"
+                       (chartClick)="chartClicked($event)">
+                      </canvas>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

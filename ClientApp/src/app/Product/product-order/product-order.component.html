@@ -1,0 +1,77 @@
+<!-- <p>product-order works!</p>
+<table border="1">
+    <div *ngIf="order">
+        <thead>
+            <tr class="row">
+                <th>
+                    Order Id
+                </th>
+                <th>
+                    Ordered Date
+                </th>
+                <th>
+                    Product Name 
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Total
+                </th>
+                <th>
+                    Total Price
+                </th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of order" >
+            <td>
+                {{items.orderid}}
+            </td>
+            <td>
+                {{items.orderedDate}}
+            </td>
+            <td>
+                {{items.cartModel.productName}}
+            </td>
+            <td>
+                {{items.cartModel.quantity}}
+            </td>
+            <td>
+                {{items.cartModel.price}}
+            </td>
+            <td>
+                {{items.cartModel.totalPrice}}
+            </td>
+        </tbody>
+    </div>
+
+</table> -->
+<div class="container">
+    <div class="row">
+       <div class="col-lg-4" *ngFor="let order of orders" style="margin-bottom: 20px;">
+           <div class="card">
+             <div class="card bg-light" >
+              <div class="card-body">
+                <div class="card-content align-items-center">
+                 
+                 <h5>Order Id <a >{{ order.orderid }}</a></h5>
+                 <h5>Ordered Date <a >{{ order.orderedDate }}</a></h5>
+                 <h6>Ordered Amount <a>₹{{order.orderedPrice}}</a></h6>
+                 <h6>Payment Status <a>{{order.orderedStatus}}</a></h6>
+                 <div *ngFor = "let model of order.cartModel">
+                    <h6>Product Name <a>{{model.productName}}</a></h6>
+                    <div style="border: 1px;">
+                        <p>Quantity <a>{{model.quantity}}</a></p>
+                        <p>Product Price <a>₹{{model.price}}</a></p>
+                        <p>Total <a>₹{{model.totalPrice}}</a></p>
+                    </div>
+                
+                 </div>
+               
+                </div>
+              </div>
+             </div>        
+           </div>         
+       </div>
+    </div>
+  </div>

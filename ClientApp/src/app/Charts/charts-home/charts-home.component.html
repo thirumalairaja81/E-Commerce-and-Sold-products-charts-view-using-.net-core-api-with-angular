@@ -1,0 +1,49 @@
+<header >
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <div class="container">
+        <h6  class="navbar-brand">Chart's Dashboard</h6>
+       <div [ngClass]="{ show: isExpanded }">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="row mt-2" >
+        <div class="col-lg-12" style="margin-bottom: 20px;">
+            <div class="card bg-light" >
+              <div class="card-body">
+                <h5 class="card-title">Line Chart</h5>
+                <p class="card-content"> <app-line-charts></app-line-charts></p>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-6"style="margin-bottom: 20px;">
+          <div class="card bg-light" >
+            <div class="card-body">
+              <h5 class="card-title">Bar Chart</h5>
+              <p class="card-content"><app-bar-charts></app-bar-charts></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg" style="margin-bottom: 20px;">
+          <div class="card bg-light" >
+            <div class="card-body">
+              <h5 class="card-title">Doughnut Chart</h5>
+              <p class="card-content"><app-doughnut-charts></app-doughnut-charts></p>
+            </div>
+          </div>
+         
+        </div>
+         <div class="col-lg-12"style="margin-bottom: 20px;">
+          <div class="card bg-light" >
+              <div class="card-body">
+              <h5 class="card-title">Pie Chart</h5>
+              <p class="card-content">  <app-pie-charts></app-pie-charts></p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
